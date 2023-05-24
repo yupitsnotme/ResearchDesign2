@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+\documentclass[twocolumn]{article}
 
 %% Useful packages
 \usepackage[a4paper,top=3cm,bottom=3cm,left=3.7cm,right=2.5cm,marginparwidth=1.75cm,headheight=22pt]{geometry}
@@ -33,8 +33,6 @@
 \reversemarginpar % sets the todo in the left margin
 \usepackage{enumitem}
 
-
-
 %==== Header and Footer configure ====
 % Define the plain pagestyle used by most chapters
 \fancypagestyle{plain}{
@@ -59,10 +57,6 @@
 
 % \renewcommand{\chaptermark}[1]{\markboth{#1}{}}% Comment this line to use header "Chapter 1. Literature View"; otherwise header is "Literature View"
 
-\addtocontents{toc}{\protect\vspace{0.05in}}
-\addtocontents{lof}{\protect\vspace{0.05in}}
-\addtocontents{lot}{\protect\vspace{0.05in}}
-
 
 
 \begin{document}
@@ -74,35 +68,12 @@
 %\let\cleardoublepage\clearpage
 \pagenumbering{roman}
 
-\include{Front/02_authorship}
-\include{Front/03_copyright.tex}
-\include{Front/04_Acknowledgement}
-\include{Front/05_Abstract}
-
-
-\renewcommand*\contentsname{\centering Table of Contents}
-\tableofcontents
-
 \newpage
-
-
-\renewcommand{\listfigurename}{\centering List of Figures}
-\listoffigures
-\addcontentsline{toc}{chapter}{List of Figures}
-\newpage
-
-\renewcommand{\listtablename}{\centering List of Tables}
-\listoftables 
-\addcontentsline{toc}{chapter}{List of Tables}
-\newpage
-
-\include{Front/06_Abbreviations}
 
 
 %\endgroup
 
 %==== MAIN PART ====
-
 \pagenumbering{arabic}
 \include{Sections/01_Introduction}
 \include{Sections/02_LiteratureReview}
@@ -112,7 +83,6 @@
 
 %==== ENDING PART ===
 
-\renewcommand\bibname{List of References}
 \bibliographystyle{unsrt}
 \begin{spacing}{2.0}
 \titlespacing*{\chapter}{0pt}{-18pt}{41pt}
